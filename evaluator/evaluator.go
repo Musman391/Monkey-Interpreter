@@ -3,6 +3,7 @@ package evaluator
 import (
 	"Monkey-Interpreter/ast"
 	"Monkey-Interpreter/object"
+	"fmt"
 )
 
 var (
@@ -171,4 +172,8 @@ func evalBlockStatement(block *ast.BlockStatement) object.Object {
 	}
 
 	return result
+}
+
+func newError(format string, a ...interface{}) *object.Error {
+	return &object.Error{Message: fmt.Sprintf(format, a...)}
 }
