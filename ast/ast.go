@@ -361,7 +361,7 @@ type HashLiteral struct {
 }
 
 func (hl *HashLiteral) expressionNode() {}
-func (hl *HashLiteral) TokenLIteral() string {
+func (hl *HashLiteral) TokenLiteral() string {
 	return hl.Token.Literal
 }
 func (hl *HashLiteral) String() string {
