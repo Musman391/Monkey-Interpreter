@@ -71,7 +71,7 @@ func New(l *lexer.Lexer) *Parser {
 
 	p.registerInfix(token.LBRACKET, p.parseIndexExpression)
 
-	p.registerPrefix(token.LBRACKET, p.parseHashLiteral)
+	p.registerPrefix(token.LBRACE, p.parseHashLiteral)
 	return p
 }
 
